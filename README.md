@@ -1,128 +1,131 @@
-# 🌟 ALPHA LC — O'quv Markazi Ekotizimi (Telegram Bot + WebApp + AI)
+<h1 align="center">🌟 ALPHA LC — O'quv Markazi Ekotizimi</h1>
 
-Zamonaviy o'quv markazlari uchun to'liq avtomatlashtirilgan boshqaruv ekotizimi: **Telegram Bot (Aiogram 3.x)**, **Telegram Mini App (React + Vite + Tailwind)**, **FastAPI Backend**, **PostgreSQL** va **AI PDF Test Generator**.
+<p align="center">
+  Zamonaviy til o'quv markazlari uchun to'liq avtomatlashtirilgan boshqaruv tizimi — <strong>Telegram Bot</strong>, <strong>Web App</strong> va sun'iy intellekt imkoniyatlari bir platformada.
+</p>
 
----
-
-## 🚀 Asosiy Imkoniyatlar
-
-### 🎓 1. O'quvchilar uchun
-* **Ro'yxatdan o'tish & Profil:** 3 tilda (🇺🇿 uz, 🇷🇺 ru, 🇬🇧 en) ism, telefon va tilni sozlash.
-* **Kurslar & Guruhlar Katalogi:** Barcha mavjud kurslar, dars jadvallari va o'qituvchilar ma'lumotlari.
-* **Free Dars & Placement Test:** IELTS, CEFR va General English bo'yicha daraja testi (A1-C2).
-* **To'lov Tizimi:** Free dars guruhiga moslashtirilgan to'lov, Naqd va Online (Click, Payme, Uzum).
-* **Referal Dasturi:** Do'stlarni taklif qilish orqali +5% kümülyativ chegirma (100% gacha) va Ambassador nishoni.
-* **Gamifikatsiya:** 7 ta maxsus badge, XP & Level, 7 kunlik Streak, Leaderboard va Kurs tamomlanganda avtomatik **PDF Sertifikat**.
-* **Uy Vazifasi:** Joriy faol vazifani ajratib ko'rsatish, materiallarni yuklab olish va o'tmishdagi vazifalar tarixi.
-
-### 👨‍🏫 2. O'qituvchilar va Adminlar uchun
-* **Free Dars So'rovlari:** Yangi so'rovlar kelganda «✅ Qabul qilish» va «❌ Rad etish» (First-teacher-wins).
-* **Davomat:** QR-kod orqali yoki botdan 1 ta bosishda guruh davomatini belgilash.
-* **Uy Vazifasi Yuklash:** Guruhga fayl, rasm yoki izoh bilan uy vazifasi biriktirish.
-* **To'lovlarni Tasdiqlash:** Naqd to'lovlarni qabul qilish va o'quvchini avtomatik guruhga yozish.
-* **Admin Dashboard WebApp:** Jonli KPI statistika, guruhlar ochish/tahrirlash, o'quvchilar boshqaruvi, to'lovlar hisoboti.
-* **🤖 AI PDF Test Generator:** PDF test faylidan AI orqali savollar, variantlar va javoblarni avtomatik ajratib olish va 1 ta bosishda faollashtirish.
-* **📢 PRO Broadcast:** Barcha foydalanuvchilar, o'quvchilar yoki kurslar bo'yicha matn, rasm, video, hujjat yoki forward postlarni ommaviy tarqatish (ixtiyoriy inline tugma bilan).
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/FastAPI-backend-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/Aiogram-3.21-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Aiogram"/>
+  <img src="https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react" alt="React"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Docker-ready-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+</p>
 
 ---
 
-## 🛠 Texnologiyalar
+## Mundarija
 
-* **Backend:** Python 3.12, FastAPI, SQLAlchemy (Asyncio), Asyncpg, Pydantic, Alembic
-* **Telegram Bot:** Aiogram 3.21, Fluent Runtime (aiogram-i18n)
-* **Frontend:** React 19, Vite, TailwindCSS v4, Axios
-* **Database:** PostgreSQL 16
-* **AI & Generator:** Gemini API / OpenAI API / Regex Parser, PyPDF, ReportLab (PDF Certificates)
-* **Deployment:** Docker, Docker Compose, Nginx, Cloudflare Tunnel
+- [Umumiy Ko'rinish](#umumiy-korinish)
+- [Asosiy Imkoniyatlar](#asosiy-imkoniyatlar)
+- [Texnologik Stack](#texnologik-stack)
+- [Loyiha Tuzilishi](#loyiha-tuzilishi)
+- [Lokal O'rnatish va Ishga Tushirish](#lokal-ornatish-va-ishga-tushirish)
+- [Docker Orqali Ishga Tushirish](#docker-orqali-ishga-tushirish)
+- [Litsenziya](#litsenziya)
 
 ---
 
-## 💻 Mahalliy Ishga Tushirish (Local Development)
+## Umumiy Ko'rinish
 
-### 1. Bog'liqliklarni o'rnatish
-```powershell
-# Virtual muhit yaratish
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+**ALPHA LC** — o'quv markazlari (IELTS/CEFR yo'nalishi) uchun mo'ljallangan integratsiyalashgan boshqaruv tizimi. Talabalar Telegram bot va Web App orqali ro'yxatdan o'tadi, kurslarga yoziladi, testlardan o'tadi va to'lovlarini kuzatib boradi; o'qituvchi va adminlar esa alohida panel orqali guruhlar, davomat, uy vazifalari va to'lovlarni boshqaradi.
 
-# Python paketlarini o'rnatish
+## Asosiy Imkoniyatlar
+
+### Talabalar uchun
+- **Ko'p tillilik**: O'zbek, Rus, Ingliz tillarida ro'yxatdan o'tish va interfeys.
+- **Kurslar katalogi**: Jadval, daraja (A1–C2) va guruhlar bo'yicha ko'rish.
+- **Bepul sinov darsi**: Daraja aniqlash testi + birinchi bosgan o'qituvchiga avtomatik biriktirish.
+- **Referal dasturi**: Har bir taklif uchun kumulyativ chegirma, jami 100% gacha.
+- **Gamifikatsiya**: Xarakter nishonlari (badges), XP tizimi, 7 kunlik streak, avtomatik PDF sertifikatlar.
+- **To'lovlar**: Click, Payme, Uzum orqali to'lov so'rovi yuborish (admin/o'qituvchi tasdiqlaydi).
+
+### O'qituvchi va Admin uchun
+- **QR-kod orqali davomat** nazorati.
+- **Uy vazifalarini** yuklash va tekshirish, 3 soatlik javobsizlikda avtomatik adminga eskalatsiya.
+- **AI PDF Test Generator**: PDF fayldan savol, variant va javoblarni AI yordamida avtomatik ajratib olish — qo'lda kiritishga hojat qolmaydi.
+- **Jonli KPI dashboard**: guruhlar, talabalar va to'lovlar bo'yicha umumiy nazorat.
+- **Ommaviy xabar yuborish (broadcast)** — maqsadli auditoriyalarga.
+
+---
+
+## Texnologik Stack
+
+| Qatlam | Texnologiyalar |
+|---|---|
+| **Backend** | Python 3.12, FastAPI, SQLAlchemy, PostgreSQL 16 |
+| **Bot** | Aiogram 3.21 |
+| **Frontend (WebApp)** | React 19, Vite, Tailwind CSS v4 |
+| **Deployment** | Docker, Nginx, Cloudflare Tunnel |
+
+---
+
+## Loyiha Tuzilishi
+
+```
+english_center/
+├── app/            # Telegram bot handlerlari va logikasi
+├── backend/        # FastAPI backend (API)
+├── webapp/         # React + Vite frontend (Telegram Mini App)
+├── locales/        # Ko'p tillilik tarjima fayllari
+├── middlewares/    # Aiogram middleware'lari
+├── nginx/          # Reverse proxy konfiguratsiyasi
+├── scripts/        # Yordamchi skriptlar
+├── init_db.py      # Ma'lumotlar bazasini boshlang'ich to'ldirish
+├── main.py         # Bot kirish nuqtasi
+└── docker-compose.yml
+```
+
+---
+
+## Lokal O'rnatish va Ishga Tushirish
+
+### 1. Repositoryni yuklab oling va paketlarni o'rnating
+```bash
+git clone https://github.com/zemeisteer/english_center.git
+cd english_center
 pip install -r requirements.txt
+```
 
-# WebApp paketlarini o'rnatish
+### 2. Muhit o'zgaruvchilarini sozlang
+```bash
+cp .env.example .env
+```
+`.env` faylida quyidagilarni to'ldiring: `BOT_TOKEN` ([@BotFather](https://t.me/BotFather)dan), `ADMINS`, PostgreSQL ulanish ma'lumotlari, `WEBAPP_URL`.
+
+### 3. Ma'lumotlar bazasini tayyorlang
+```bash
+python init_db.py
+```
+
+### 4. Botni ishga tushiring
+```bash
+python main.py
+```
+
+### 5. Frontend (WebApp)ni ishga tushiring
+```bash
 cd webapp
 npm install
-cd ..
-```
-
-### 2. .env faylini sozlash
-`.env.example` dan nusxa olib `.env` yarating va `BOT_TOKEN`, `ADMINS`, `DB_PASS` larni kiriting:
-```env
-BOT_TOKEN=8976693690:AAH...
-ADMINS=1435473812
-DB_USER=postgres
-DB_PASS=1234
-DB_HOST=127.0.0.1
-DB_PORT=5432
-DB_NAME=english_center
-WEBAPP_URL=http://localhost:5173
-DEV_MODE=True
-```
-
-### 3. Ma'lumotlar bazasini initsializatsiya qilish
-```powershell
-python init_db.py --reset
-```
-
-### 4. Xizmatlarni ishga tushirish (4 ta terminalda)
-```powershell
-# Terminal 1: FastAPI Backend
-uvicorn backend.main:app --reload --port 8000
-
-# Terminal 2: Vite WebApp Frontend
-cd webapp
 npm run dev
-
-# Terminal 3: Telegram Bot & Scheduler
-python main.py
-
-# Terminal 4: Cloudflare Tunnel (Telegram Mini App uchun)
-python tunnel.py
 ```
 
 ---
 
-## 🐳 Production Serverga Joylashtirish (Docker)
+## Docker Orqali Ishga Tushirish
 
-Ubuntu VPS yoki istalgan Linux serverda 1 ta buyruq bilan ishga tushirish:
+Loyiha to'liq konteynerlashtirilgan — PostgreSQL, FastAPI backend, bot, React frontend va Nginx bitta buyruq bilan ishga tushadi:
 
 ```bash
-# 1. Loyihani klonlash
-git clone https://github.com/uzbsobirov/english_center.git
-cd english_center
-
-# 2. .env faylini to'ldirish
-cp .env.example .env
-nano .env
-
-# 3. 1-Click Deploy skriptini yurgazish
-chmod +x deploy.sh
-./deploy.sh
+cp .env.example .env   # va to'ldiring
+docker compose up -d --build
 ```
+
+Bu quyidagilarni ishga tushiradi: `postgres`, `backend` (FastAPI), `bot` (Aiogram), `frontend` (React) va `nginx` (reverse proxy, 80-port).
 
 ---
 
-## 🧪 Avtomatlashtirilgan Testlar
+## Litsenziya
 
-```powershell
-python scratch/test_stage4.py        # Davomat, Uy vazifasi va Eslatmalar
-python scratch/test_stage6.py        # Gamifikatsiya, Nishonlar va PDF Sertifikat
-python scratch/test_payments.py      # To'lovlar, Referal chegirmalari va Qaytarish
-python scratch/test_free_trial_flow.py # Free Dars va O'qituvchi taklif oqimi
-python scratch/test_ai_generator.py  # AI PDF Test Generator
-```
-
----
-
-## 👤 Muallif
-* **ALPHA Learning Center Team**
-* **Repository:** [uzbsobirov/english_center](https://github.com/uzbsobirov/english_center)
+Bu — buyurtma asosida ishlab chiqilgan proprietar (yopiq) loyiha. Barcha huquqlar himoyalangan © 2026.
